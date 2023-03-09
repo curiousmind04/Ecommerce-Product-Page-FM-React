@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.4rem;
+  /* position: relative; */
+}
+
+header > * {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  width: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.hamburger > img {
+  width: 100%;
+}
+
+.avatar {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.avatar > img {
+  width: 100%;
+}
+
+.cart {
+  width: 1.4rem;
+  margin-right: 1.4rem;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.cart > img {
+  width: 100%;
+}
