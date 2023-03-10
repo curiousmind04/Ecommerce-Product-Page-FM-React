@@ -117,14 +117,12 @@
     filter: brightness(0.8);
     overflow: hidden;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
   }
   .chosen {
     border-radius: 0.8rem;
     border: 2px solid hsl(26, 100%, 55%);
     overflow: hidden;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
   }
   .thumbnail > img {
     width: 100%;

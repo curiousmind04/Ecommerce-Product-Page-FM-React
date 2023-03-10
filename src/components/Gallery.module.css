@@ -29,16 +29,17 @@
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top: calc(50% - 1.25rem);
   cursor: pointer;
 }
 
 .next {
   right: 1rem;
+  top: calc(50% - 1.25rem);
 }
 
 .previous {
   left: 1rem;
+  top: calc(50% - 1.25rem);
 }
 
 .next > img,
