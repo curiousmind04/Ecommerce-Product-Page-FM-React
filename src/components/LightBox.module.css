@@ -1,7 +1,8 @@
 @media (max-width: 56.24999rem) {
   .backdrop,
   .container,
-  .thumbnails {
+  .thumbnails,
+  .outer {
     display: none;
   }
 }
@@ -22,7 +23,8 @@
 @media (min-width: 56.25rem) {
   .backdrop,
   .container,
-  .thumbnails {
+  .thumbnails,
+  .outer {
     display: block;
   }
   .backdrop {
@@ -37,14 +39,18 @@
     cursor: pointer;
   }
 
-  .container {
-    width: 34.5rem;
-    height: 34.5rem;
+  .outer {
     border-radius: 1rem;
     position: absolute;
     top: 8rem;
     left: calc(50% - 17.25rem);
     z-index: 5;
+  }
+
+  .container {
+    width: 34.5rem;
+    height: 34.5rem;
+    pointer-events: none;
   }
 
   .container > img {

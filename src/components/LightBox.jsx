@@ -43,19 +43,21 @@ function LightBox(props) {
   return (
     <>
       <div className={classes.backdrop} onClick={hideLighthouseHandler}></div>
-      <div className={classes.container}>
-        {num === 1 && (
-          <img src="/images/image-product-1.jpg" alt="product image 1" />
-        )}
-        {num === 2 && (
-          <img src="/images/image-product-2.jpg" alt="product image 2" />
-        )}
-        {num === 3 && (
-          <img src="/images/image-product-3.jpg" alt="product image 3" />
-        )}
-        {num === 4 && (
-          <img src="/images/image-product-4.jpg" alt="product image 4" />
-        )}
+      <div className={classes.outer}>
+        <div className={classes.container}>
+          {num === 1 && (
+            <img src="/images/image-product-1.jpg" alt="product image 1" />
+          )}
+          {num === 2 && (
+            <img src="/images/image-product-2.jpg" alt="product image 2" />
+          )}
+          {num === 3 && (
+            <img src="/images/image-product-3.jpg" alt="product image 3" />
+          )}
+          {num === 4 && (
+            <img src="/images/image-product-4.jpg" alt="product image 4" />
+          )}
+        </div>
         <div className={classes.next} onClick={nextHandler}>
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -88,6 +90,7 @@ function LightBox(props) {
           </svg>
         </div>
       </div>
+
       <div className={classes.thumbnails}>
         <div
           className={num === 1 ? classes.chosen : classes.thumbnail}
