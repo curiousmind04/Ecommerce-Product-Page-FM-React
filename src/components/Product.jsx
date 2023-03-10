@@ -40,7 +40,7 @@ function Product() {
       </div>
       <div className={classes.buttons}>
         <div className={classes.counter}>
-          <button onClick={decreaseAmountHandler}>
+          <div onClick={decreaseAmountHandler}>
             <svg
               width="12"
               height="4"
@@ -55,9 +55,9 @@ function Product() {
               </defs>
               <use fill="#FF7E1B" fillRule="nonzero" xlinkHref="#a" />
             </svg>
-          </button>
+          </div>
           <span>{amount}</span>
-          <button onClick={increaseAmountHandler}>
+          <div onClick={increaseAmountHandler}>
             <svg
               width="12"
               height="12"
@@ -72,7 +72,7 @@ function Product() {
               </defs>
               <use fill="#FF7E1B" fillRule="nonzero" xlinkHref="#b" />
             </svg>
-          </button>
+          </div>
         </div>
         <button className={classes.action} onClick={addToCartHandler}>
           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
