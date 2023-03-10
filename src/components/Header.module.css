@@ -46,6 +46,23 @@ header > * {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
+  position: relative;
+}
+
+.badge {
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  height: 0.8rem;
+  width: 1.2rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 18.5rem) {

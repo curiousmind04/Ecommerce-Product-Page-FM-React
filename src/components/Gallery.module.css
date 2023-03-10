@@ -7,10 +7,8 @@
 .container {
   width: 100%;
   max-width: 24rem;
-  /* margin-inline: auto; */
   height: 19rem;
   overflow: hidden;
-  /* position: relative; */
   pointer-events: none;
 }
 
@@ -32,7 +30,6 @@
   position: absolute;
   z-index: 1;
   top: calc(50% - 1.25rem);
-  /* pointer-events: all; */
   cursor: pointer;
 }
 

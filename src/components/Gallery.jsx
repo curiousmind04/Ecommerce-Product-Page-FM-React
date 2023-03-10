@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import classes from "./Gallery.module.css";
-import Lighthouse from "./Lighthouse";
+import LightBox from "./LightBox";
 
 function Gallery() {
   const [num, setNum] = useState(1);
@@ -98,7 +98,7 @@ function Gallery() {
         </div>
       </div>
       {showLighthouse && (
-        <Lighthouse onhideLighthouse={onhideLighthouse} num={num} />
+        <LightBox onhideLighthouse={onhideLighthouse} num={num} />
       )}
     </div>
   );

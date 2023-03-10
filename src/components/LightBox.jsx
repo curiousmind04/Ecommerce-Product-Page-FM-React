@@ -1,7 +1,8 @@
 import { useState } from "react";
-import classes from "./Lighthouse.module.css";
 
-function Lighthouse(props) {
+import classes from "./LightBox.module.css";
+
+function LightBox(props) {
   const [num, setNum] = useState(props.num);
 
   const hideLighthouseHandler = () => {
@@ -117,4 +118,4 @@ function Lighthouse(props) {
   );
 }
 
-export default Lighthouse;
+export default LightBox;

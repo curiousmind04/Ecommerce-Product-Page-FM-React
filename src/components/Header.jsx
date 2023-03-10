@@ -1,12 +1,14 @@
-import { useState } from "react";
-import Cart from "./Cart";
+import { useState, useContext } from "react";
 
+import Cart from "./Cart";
 import classes from "./Header.module.css";
 import Menu from "./Menu";
+import CartContext from "../store/cart-context";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const cartCtx = useContext(CartContext);
 
   const showMenuHandler = () => {
     setShowMenu(true);
@@ -49,6 +51,9 @@ function Header() {
       </div>
       <div>
         <div className={classes.cart}>
+          {cartCtx.totalAmount > 0 && (
+            <div className={classes.badge}>{cartCtx.totalAmount}</div>
+          )}
           <svg
             width="22"
             height="20"

@@ -103,6 +103,11 @@ p {
   box-shadow: 0px 20px 20px rgba(255, 125, 26, 0.3);
 }
 
+.action:active {
+  transform-origin: center;
+  transform: scale(1.02);
+}
+
 .action > svg {
   margin-right: 1rem;
 }
