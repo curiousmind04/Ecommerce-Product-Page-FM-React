@@ -19,3 +19,9 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
+@media (min-width: 56.25rem) {
+  body {
+    padding-inline: 2rem;
+  }
+}

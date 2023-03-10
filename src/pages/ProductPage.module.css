@@ -1,0 +1,11 @@
+@media (min-width: 56.25rem) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 67.5rem;
+    margin-inline: auto;
+    padding: 5.4rem 2rem;
+    gap: 2rem;
+  }
+}

@@ -4,7 +4,10 @@
   background-color: #111111;
   opacity: 0.8;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
+  cursor: pointer;
 }
 
 .container {
@@ -23,7 +26,20 @@
   text-align: left;
 }
 
+.container img {
+  cursor: pointer;
+}
+
 .container ul {
+  color: hsl(220, 13%, 13%);
+  font-size: 1.15rem;
   font-weight: 700;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.container ul > * {
+  cursor: pointer;
 }

@@ -1,17 +1,25 @@
 import classes from "./Menu.module.css";
 
-function Menu() {
+function Menu({ onHideMenuHandler }) {
+  const hideMenuHandler = () => {
+    onHideMenuHandler();
+  };
+
   return (
     <>
-      <div className={classes.backdrop}></div>
+      <div className={classes.backdrop} onClick={hideMenuHandler}></div>
       <div className={classes.container}>
-        <img src="/images/icon-close.svg" alt="close icon" />
+        <img
+          src="/images/icon-close.svg"
+          alt="close icon"
+          onClick={hideMenuHandler}
+        />
         <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li onClick={hideMenuHandler}>Collections</li>
+          <li onClick={hideMenuHandler}>Men</li>
+          <li onClick={hideMenuHandler}>Women</li>
+          <li onClick={hideMenuHandler}>About</li>
+          <li onClick={hideMenuHandler}>Contact</li>
         </ul>
       </div>
     </>
