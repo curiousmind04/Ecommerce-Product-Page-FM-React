@@ -12,7 +12,7 @@ function Header() {
     setShowMenu(true);
   };
 
-  const onHideMenuHandler = () => {
+  const onHideMenu = () => {
     setShowMenu(false);
   };
 
@@ -20,14 +20,14 @@ function Header() {
     setShowCart(true);
   };
 
-  const onHideCartHandler = () => {
+  const onHideCart = () => {
     setShowCart(false);
   };
 
   return (
     <header>
-      {showMenu && <Menu onHideMenuHandler={onHideMenuHandler} />}
-      {showCart && <Cart onHideCartHandler={onHideCartHandler} />}
+      {showMenu && <Menu onHideMenu={onHideMenu} />}
+      {showCart && <Cart onHideCart={onHideCart} />}
       <div className={classes.top}>
         <div className={classes.hamburger}>
           <img

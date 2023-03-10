@@ -1,10 +1,17 @@
+.outer {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+}
+
 .container {
   width: 100%;
   max-width: 24rem;
-  margin-inline: auto;
+  /* margin-inline: auto; */
   height: 19rem;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
+  pointer-events: none;
 }
 
 .container > img {
@@ -25,6 +32,7 @@
   position: absolute;
   z-index: 1;
   top: calc(50% - 1.25rem);
+  /* pointer-events: all; */
   cursor: pointer;
 }
 
@@ -46,6 +54,21 @@
   display: none;
 }
 
+@media (max-width: 18.5rem) {
+  .container {
+    height: fit-content;
+  }
+  .container > img {
+    bottom: 0;
+  }
+}
+
+@media (hover: hover) {
+  .thumbnail:hover {
+    filter: brightness(1);
+  }
+}
+
 @media (min-width: 56.25rem) {
   .container {
     min-width: 25rem;
@@ -54,6 +77,7 @@
     margin-inline: 0;
     border-radius: 1rem;
     margin-bottom: 1.9rem;
+    pointer-events: all;
     cursor: pointer;
   }
   .container > img {

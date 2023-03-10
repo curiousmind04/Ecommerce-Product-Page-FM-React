@@ -1,8 +1,11 @@
 import { useState } from "react";
+
 import classes from "./Gallery.module.css";
+import Lighthouse from "./Lighthouse";
 
 function Gallery() {
   const [num, setNum] = useState(1);
+  const [showLighthouse, setShowLighthouse] = useState(false);
 
   const nextHandler = () => {
     if (num < 4) {
@@ -11,6 +14,7 @@ function Gallery() {
       setNum(1);
     }
   };
+
   const previousHandler = () => {
     if (num > 1) {
       setNum(num - 1);
@@ -34,36 +38,39 @@ function Gallery() {
     }
   };
 
+  const showLighthouseHandler = () => {
+    setShowLighthouse(true);
+  };
+
+  const onhideLighthouse = () => {
+    setShowLighthouse(false);
+  };
+
   return (
     <div>
-      <div className={classes.container}>
-        {num === 1 && (
-          <img src="/images/image-product-1.jpg" alt="product image 1" />
-        )}
-        {num === 2 && (
-          <img src="/images/image-product-2.jpg" alt="product image 2" />
-        )}
-        {num === 3 && (
-          <img src="/images/image-product-3.jpg" alt="product image 3" />
-        )}
-        {num === 4 && (
-          <img src="/images/image-product-4.jpg" alt="product image 4" />
-        )}
-        <div className={classes.next}>
-          <img
-            src="/images/icon-next.svg"
-            alt="next icon"
-            onClick={nextHandler}
-          />
+      <div className={classes.outer}>
+        <div className={classes.container} onClick={showLighthouseHandler}>
+          {num === 1 && (
+            <img src="/images/image-product-1.jpg" alt="product image 1" />
+          )}
+          {num === 2 && (
+            <img src="/images/image-product-2.jpg" alt="product image 2" />
+          )}
+          {num === 3 && (
+            <img src="/images/image-product-3.jpg" alt="product image 3" />
+          )}
+          {num === 4 && (
+            <img src="/images/image-product-4.jpg" alt="product image 4" />
+          )}
         </div>
-        <div className={classes.previous}>
-          <img
-            src="/images/icon-previous.svg"
-            alt="previous icon"
-            onClick={previousHandler}
-          />
+        <div className={classes.next} onClick={nextHandler}>
+          <img src="/images/icon-next.svg" alt="next icon" />
+        </div>
+        <div className={classes.previous} onClick={previousHandler}>
+          <img src="/images/icon-previous.svg" alt="previous icon" />
         </div>
       </div>
+
       <div className={classes.thumbnails}>
         <div
           className={num === 1 ? classes.chosen : classes.thumbnail}
@@ -90,6 +97,9 @@ function Gallery() {
           <img src="/images/image-product-4-thumbnail.jpg" alt="thumbnail 4" />
         </div>
       </div>
+      {showLighthouse && (
+        <Lighthouse onhideLighthouse={onhideLighthouse} num={num} />
+      )}
     </div>
   );
 }

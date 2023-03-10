@@ -1,8 +1,8 @@
 import classes from "./Cart.module.css";
 
-function Cart({ onHideCartHandler }) {
+function Cart({ onHideCart }) {
   const hideCartHandler = () => {
-    onHideCartHandler();
+    onHideCart();
   };
 
   return (

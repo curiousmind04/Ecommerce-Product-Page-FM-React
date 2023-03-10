@@ -1,8 +1,8 @@
 import classes from "./Menu.module.css";
 
-function Menu({ onHideMenuHandler }) {
+function Menu({ onHideMenu }) {
   const hideMenuHandler = () => {
-    onHideMenuHandler();
+    onHideMenu();
   };
 
   return (

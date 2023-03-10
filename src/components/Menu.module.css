@@ -17,6 +17,7 @@
   top: 0;
   left: 0;
   width: 67%;
+  max-width: 23rem;
   height: 100%;
   z-index: 3;
   display: flex;
@@ -42,4 +43,11 @@
 
 .container ul > * {
   cursor: pointer;
+}
+
+@media (min-width: 56.25rem) {
+  .backdrop,
+  .container {
+    display: none;
+  }
 }
